@@ -13,7 +13,6 @@ export const create = async (req: Request, res: Response) => {
 
   const newList = new ListModel({
     name: req.body.name,
-    order: count + 1,
   });
 
   try {
@@ -62,15 +61,15 @@ export const findOne = async (req: Request, res: Response) => {
   }
 };
 
-export const findLowestOrder = async (req: Request, res: Response) => {
+export const findLowestList = async (req: Request, res: Response) => {
   try {
-    const list = await ListModel.find({}).sort({ order: 1 }).limit(1);
-    if (!list || list.length === 0) {
+    const list = await ListModel.findOne();
+    if (!list) {
       return res.status(404).send({
         message: "No list found",
       });
     }
-    res.send(list[0]);
+    res.send(list);
   } catch (error: any) {
     res.status(500).send({
       message:

@@ -23,8 +23,8 @@ export class ListService {
     return this.http.get<List>(`${this.apiUrl}/${id}`);
   }
 
-  getLowestOrderList() {
-    return this.http.get<List>(`${this.apiUrl}/lowest-order`);
+  getLowesList() {
+    return this.http.get<List>(`${this.apiUrl}/lowest-list`);
   }
 
   updateList(list: List) {

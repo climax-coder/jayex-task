@@ -34,7 +34,7 @@ export const initializeData = async () => {
   for (let i = 0; i < initialLists.length; i++) {
     const existingList = await ListModel.findOne({ name: initialLists[i] });
     if (!existingList) {
-      const newList = new ListModel({ name: initialLists[i], order: i + 1 });
+      const newList = new ListModel({ name: initialLists[i] });
       await newList.save();
     }
   }

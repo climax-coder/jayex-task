@@ -5,7 +5,7 @@ const listsRouter = Router();
 
 listsRouter.post("/", lists.create);
 listsRouter.get("/", lists.findAll);
-listsRouter.get("/lowest-order", lists.findLowestOrder);
+listsRouter.get("/lowest-list", lists.findLowestList);
 listsRouter.get("/:listId", lists.findOne);
 listsRouter.put("/:listId", lists.update);
 listsRouter.delete("/:listId", lists.deleteList);

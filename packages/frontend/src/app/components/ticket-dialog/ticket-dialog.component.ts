@@ -35,7 +35,7 @@ export class TicketDialogComponent {
     this.tagService.getAllTags().subscribe((tags) => {
       this.allTags = tags;
     });
-    this.listService.getLowestOrderList().subscribe((list) => {
+    this.listService.getLowesList().subscribe((list) => {
       this.list = list;
     });
   }
