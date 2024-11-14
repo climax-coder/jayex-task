@@ -1,4 +1,4 @@
-# Jayex Front End Technical Test (Kanban Board)
+# Front End Angular Simple Kanban Board
 
 We would like you to demonstrate your ability to code components on a Front End and backend. We are looking for a simple Kanban layout that is easy to use and that can be moved from one column to another.
 Requirements
